@@ -14,6 +14,8 @@
                 <button size="mini" type="default" plain="true" @click="goHome">我也要创建Home</button>
             </div>
         </div>
+    </div>
+    <div class="section viewed">
         <viewed :list="list" :userInfo="userInfo"></viewed>
     </div>
     <div class="footer">
@@ -77,10 +79,13 @@ export default {
 <style>
     .container {
         background-color: #f4f4f4;
-        padding: 10px;
+        padding: 0;
     }
     .section {
         background-color: #fff;
+    }
+    .viewed {
+        margin-top: 10px;
     }
     .image {
         margin-bottom: 40px;
@@ -92,12 +97,12 @@ export default {
         padding-right: 10px;
     }
     .share {
-        margin: 0 10px 10px;
+        margin: 0 10px;
         border-top: 1px solid #d9d9d9;
     }
     .btn-group {
         display: flex;
-        padding: 10px 0;
+        padding: 20px 0 30px;
     }
     .footer {
         text-align: center;

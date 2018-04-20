@@ -32,11 +32,13 @@ export default {
 
 <style>
 .count {
-  padding: 0 10px;
+  padding: 15px 10px;
   color: #999;
+  border-bottom:1px solid #f4f4f4;
 }
 .friend {
   clear: both;
+  border-bottom:1px solid #f4f4f4;
 }
 .userinfo-portrait,
 .userinfo-nickname,
