@@ -1,6 +1,18 @@
 <template>
   <div class="container">
-      <button @click="test">test</button>
+    <div class="image">
+        <img src="../../../static/u12.jpg" background-size="cover">
+    </div>
+    <div class="userInfo">
+        <p>{{userInfo.nickName}}</p>
+        <p>2018年3月16日</p>
+    </div>
+    <div class="share">
+        <div class="btn-group">
+            <button size="mini" type="default" plain="true" @click="share">分享到群里</button>
+            <button size="mini" type="default" plain="true" @click="goHome">我也要创建Home</button>
+        </div>
+    </div>
     <viewed :list="list" :userInfo="userInfo"></viewed>
   </div>
 </template>
@@ -10,7 +22,7 @@ import viewed from '@/components/viewed'
 import { onShare } from "../../utils/share"
 export default {
     onShareAppMessage(res) {
-        return onShare(res, "fromID")
+        return onShare(res,this.userInfo.nickName, "fromID")
     },
     onLoad(e) {
         console.log(JSON.stringify(e))
@@ -27,9 +39,6 @@ export default {
     },
 
     methods: {
-        test() {
-            console.log(location.href)
-        },
         getUserInfo() {
             // 调用登录接口
             wx.login({
@@ -42,9 +51,13 @@ export default {
                 },
             })
         },
-        clickHandle(msg, ev) {
-            console.log('clickHandle:', msg, ev)
+        share() {
+
         },
+        goHome() {
+            const url = '../index/main'
+            wx.navigateTo({url})
+        }
     },
 
     created() {
@@ -58,11 +71,21 @@ export default {
     .container {
         padding: 0;
     }
-    .home {
-        display: inline-block;
-        margin: 20px auto;
-        padding: 5px 10px;
-        color: blue;
-        border: 1px solid blue;
+    .image {
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
+    .userInfo {
+        margin-bottom: 20px;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .share {
+        margin: 0 10px 10px;
+        border-top: 1px solid #d9d9d9;
+    }
+    .btn-group {
+        display: flex;
+        padding: 10px 0;
     }
 </style>

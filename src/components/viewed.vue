@@ -1,6 +1,5 @@
 <template>
     <div>
-        <a href="/pages/index/main" class="home">去往首页</a>
         <div class="viewed">
             <p class="count">
                 已查看{{list.length}}人
@@ -33,7 +32,7 @@ export default {
 
 <style>
 .count {
-  padding: 0 20rpx;
+  padding: 0 10px;
   color: #999;
 }
 .friend {
@@ -43,18 +42,18 @@ export default {
 .userinfo-nickname,
 .userinfo-time {
   display: inline-block;
-  height: 168rpx;
-  line-height: 168rpx;
+  height: 74px;
+  line-height: 74px;
   vertical-align: top;
 }
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+  width: 54px;
+  height: 54px;
+  margin: 10px;
   border-radius: 50%;
 }
 .userinfo-nickname {
-  width: 335rpx;
+  width: 170px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space:nowrap;
@@ -62,7 +61,7 @@ export default {
 .userinfo-time {
   float: right;
   color: #ccc;
-  font-size: 28rpx;
-  margin-right: 20rpx;
+  font-size: 14px;
+  margin-right: 10px;
 }
 </style>

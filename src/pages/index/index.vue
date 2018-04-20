@@ -55,7 +55,7 @@ import card from '@/components/card'
 import {onShare} from '../../utils/share'
 export default {
     onShareAppMessage(res) {
-        return onShare(res, 'fromID')
+        return onShare(res, this.userInfo.nickName, 'fromID')
     },
     data() {
         return {
