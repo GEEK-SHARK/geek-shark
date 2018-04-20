@@ -59,8 +59,11 @@
 
 <script>
 import card from '@/components/card'
-
+import { onShare } from "../../utils/share"
 export default {
+    onShareAppMessage(res) {
+        return onShare(res, "fromID")
+    },
     data() {
         return {
             motto: 'Hello World',

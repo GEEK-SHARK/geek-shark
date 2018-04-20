@@ -1,13 +1,20 @@
 <template>
   <div class="container">
+      <button @click="test">test</button>
     <viewed :list="list" :userInfo="userInfo"></viewed>
   </div>
 </template>
 
 <script>
 import viewed from '@/components/viewed'
-
+import { onShare } from "../../utils/share"
 export default {
+    onShareAppMessage(res) {
+        return onShare(res, "fromID")
+    },
+    onLoad(e) {
+        console.log(JSON.stringify(e))
+    },
     data() {
         return {
             userInfo: {},
@@ -20,6 +27,9 @@ export default {
     },
 
     methods: {
+        test() {
+            console.log(location.href)
+        },
         getUserInfo() {
             // 调用登录接口
             wx.login({
