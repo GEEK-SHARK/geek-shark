@@ -5,13 +5,6 @@
                 已查看{{list.length}}人
             </p>
             <ul class="friends">
-                <li class="friend">
-                    <span class="userinfo-portrait">
-                        <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-                    </span>
-                    <span class="userinfo-nickname">{{userInfo.nickName}}</span>
-                    <span class="userinfo-time">4月20日 11:15:15</span>
-                </li>
                 <li v-for="(item, index) in list" :key="index" class="friend">
                     <span class="userinfo-portrait">
                         <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
@@ -44,13 +37,13 @@ export default {
 .userinfo-nickname,
 .userinfo-time {
   display: inline-block;
-  height: 74px;
-  line-height: 74px;
+  height: 70px;
+  line-height: 70px;
   vertical-align: top;
 }
 .userinfo-avatar {
-  width: 54px;
-  height: 54px;
+  width: 50px;
+  height: 50px;
   margin: 10px;
   border-radius: 50%;
 }

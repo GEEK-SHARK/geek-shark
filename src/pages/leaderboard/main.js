@@ -5,7 +5,7 @@ const app = new Vue(App)
 app.$mount()
 
 export default {
-    config: {
-        navigationBarTitleText: '严选圈'
-    }
+  config: {
+      navigationBarTitleText: '严选圈'
+  }
 }

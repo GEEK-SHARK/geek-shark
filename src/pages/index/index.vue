@@ -1,52 +1,54 @@
 <template>
   <div class="container" >
-  <div>
-    <span class="power">能量</span>
-    <input type="text" value="279" class="power_value"/>
-    <span class="coin">金币</span>
-    <input type="text" value="279" class="coin_value"/>
-  </div>
-  <div class="image">
-    <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="">
-    <div class="view_button">
-      <a href="/pages/share/main">👀</a>
+    <div>
+        <span class="power">能量</span>
+        <input type="text" value="279" class="power_value"/>
+        <span class="coin">金币</span>
+        <input type="text" value="279" class="coin_value"/>
     </div>
-  </div>
-  <div class="game_item_container">
-    <ul class="game_item">
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
-          <span>严选沙发</span>
+    <div class="image">
+        <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="">
+        <div class="view_button">
+        <a href="/pages/share/main">👀</a>
         </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
-          <span>严选沙发</span>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
-          <span>严选沙发</span>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="button_groups">
-    <ul>
-      <li>
-        <a href="">商城</a>
-      </li>
-      <li>
-        <a href="">好友</a>
-      </li>
-      <li>
-        <a href="">分享</a>
-      </li>
-    </ul>
-  </div>
+    </div>
+    <div class="game_item_container">
+        <ul class="game_item">
+        <li>
+            <div>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+            <span>严选沙发</span>
+            </div>
+        </li>
+        <li>
+            <div>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+            <span>严选沙发</span>
+            </div>
+        </li>
+        <li>
+            <div>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+            <span>严选沙发</span>
+            </div>
+        </li>
+        </ul>
+    </div>
+    <div class="button_groups">
+        <ul>
+        <li>
+            <a href="">
+                <img class="button_img" src="https://cdn1.iconfinder.com/data/icons/finance-banking-tiny-icons/16/shopping-128.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="/pages/leaderboard/main"><img class="button_img" src="https://cdn4.iconfinder.com/data/icons/people-37/512/38-128.png" alt=""></a>
+        </li>
+        <li>
+            <button class="share-btn" open-type="share" size="mini" type="default" plain="true" @click="share($event)"><img class="button_img" src="https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/Share-128.png" alt=""></button>
+        </li>
+        </ul>
+    </div>
   </div>
 </template>
 
@@ -85,8 +87,8 @@ export default {
                 },
             })
         },
-        clickHandle(msg, ev) {
-            console.log('clickHandle:', msg, ev)
+        share(res) {
+            onShare(res, this.userInfo.nickName, 'fromID')
         },
     },
 
@@ -167,7 +169,7 @@ export default {
     align-items: center;
 }
 .game_item_container {
-    clear: both;
+    overflow: hidden;
 }
 .game_item {
     background: rgb(242, 242, 242);
@@ -211,11 +213,29 @@ export default {
     border: 1px solid blue;
 }
 .button_groups {
-    margin-top: 150px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    height: 40px;
     font-size: 14px;
+}
+.button_groups ul {
+    overflow: hidden;
 }
 .button_groups li {
     float: right;
     margin-left: 10px;
+}
+.button_groups li a {
+    padding: 0 10px;
+}
+.button_groups li .button_img {
+    width: 32px;
+    height: 32px;
+}
+.button_groups li .share-btn {
+    border: none;
+    padding: 0 10px;
+    line-height: 1;
 }
 </style>
