@@ -9,15 +9,8 @@
   <div class="image">
     <img src="../../../static/u12.jpg" alt="">
     <div class="view_button">
-      <a href="#">👀</a>
+      <a href="/pages/share/main">👀</a>
     </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-    <a href="/pages/share/main" class="share">去往分享页面</a>
   </div>
   <div class="game_item_container">
     <ul class="game_item">
@@ -59,10 +52,10 @@
 
 <script>
 import card from '@/components/card'
-import { onShare } from "../../utils/share"
+import {onShare} from '../../utils/share'
 export default {
     onShareAppMessage(res) {
-        return onShare(res, "fromID")
+        return onShare(res, 'fromID')
     },
     data() {
         return {
