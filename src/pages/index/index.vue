@@ -210,4 +210,8 @@ export default {
     margin-top: 150px;
     font-size: 14px;
 }
+.button_groups li {
+    float: right;
+    margin-left: 10px;
+}
 </style>
