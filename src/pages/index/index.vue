@@ -7,7 +7,7 @@
     <input type="text" value="279" class="coin_value"/>
   </div>
   <div class="image">
-    <img src="../../../static/u12.jpg" alt="">
+    <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="">
     <div class="view_button">
       <a href="/pages/share/main">👀</a>
     </div>
@@ -16,19 +16,19 @@
     <ul class="game_item">
       <li>
         <div>
-          <img src="../../../static/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
           <span>严选沙发</span>
         </div>
       </li>
       <li>
         <div>
-          <img src="../../../static/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
           <span>严选沙发</span>
         </div>
       </li>
       <li>
         <div>
-          <img src="../../../static/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
           <span>严选沙发</span>
         </div>
       </li>
