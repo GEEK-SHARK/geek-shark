@@ -1,6 +1,6 @@
-export function onShare(res, fromId) {
+export function onShare(res, nickName, fromId) {
   return {
-    title: "自定义转发标题",
+    title: nickName+"邀请您参观Ta的Home",
     path: "/pages/share/main?from=" + encodeURIComponent(fromId),
     success: function(res) {
       console.log(JSON.stringify(res) + "转发成功")

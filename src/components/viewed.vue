@@ -1,18 +1,10 @@
 <template>
     <div>
-        <a href="/pages/index/main" class="home">去往首页</a>
         <div class="viewed">
             <p class="count">
                 已查看{{list.length}}人
             </p>
             <ul class="friends">
-                <li class="friend">
-                    <span class="userinfo-portrait">
-                        <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-                    </span>
-                    <span class="userinfo-nickname">{{userInfo.nickName}}</span>
-                    <span class="userinfo-time">4月20日 11:15:15</span>
-                </li>
                 <li v-for="(item, index) in list" :key="index" class="friend">
                     <span class="userinfo-portrait">
                         <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
@@ -33,28 +25,30 @@ export default {
 
 <style>
 .count {
-  padding: 0 20rpx;
+  padding: 15px 10px;
   color: #999;
+  border-bottom:1px solid #f4f4f4;
 }
 .friend {
   clear: both;
+  border-bottom:1px solid #f4f4f4;
 }
 .userinfo-portrait,
 .userinfo-nickname,
 .userinfo-time {
   display: inline-block;
-  height: 168rpx;
-  line-height: 168rpx;
+  height: 70px;
+  line-height: 70px;
   vertical-align: top;
 }
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
   border-radius: 50%;
 }
 .userinfo-nickname {
-  width: 335rpx;
+  width: 170px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space:nowrap;
@@ -62,7 +56,7 @@ export default {
 .userinfo-time {
   float: right;
   color: #ccc;
-  font-size: 28rpx;
-  margin-right: 20rpx;
+  font-size: 14px;
+  margin-right: 10px;
 }
 </style>

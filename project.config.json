@@ -9,8 +9,8 @@
 	},
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "touristappid",
-	"projectname": "mpvue_demo",
+	"appid": "wx8529f65419483650",
+	"projectname": "geek-shark",
 	"condition": {
 		"search": {
 			"current": -1,
