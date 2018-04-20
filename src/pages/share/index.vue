@@ -1,19 +1,26 @@
 <template>
   <div class="container">
-    <div class="image">
-        <img src="../../../static/u12.jpg" background-size="cover">
-    </div>
-    <div class="userInfo">
-        <p>{{userInfo.nickName}}</p>
-        <p>2018年3月16日</p>
-    </div>
-    <div class="share">
-        <div class="btn-group">
-            <button size="mini" type="default" plain="true" @click="share">分享到群里</button>
-            <button size="mini" type="default" plain="true" @click="goHome">我也要创建Home</button>
+    <div class="section">
+        <div class="image">
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" width="100%" height="100%" background-size="cover">
         </div>
+        <div class="userInfo">
+            <p>{{userInfo.nickName}}</p>
+            <p>2018年3月16日</p>
+        </div>
+        <div class="share">
+            <div class="btn-group">
+                <button size="mini" type="default" plain="true" @click="share">分享到群里</button>
+                <button size="mini" type="default" plain="true" @click="goHome">我也要创建Home</button>
+            </div>
+        </div>
+        <viewed :list="list" :userInfo="userInfo"></viewed>
     </div>
-    <viewed :list="list" :userInfo="userInfo"></viewed>
+    <div class="footer">
+        <p class="instructions">底部随便说点什么吧</p>
+        <p>网易公司版权所有</p>
+        <p>@2018 GEEK SHARK.All Rights Reserved</p>
+    </div>
   </div>
 </template>
 
@@ -69,7 +76,11 @@ export default {
 
 <style>
     .container {
-        padding: 0;
+        background-color: #f4f4f4;
+        padding: 10px;
+    }
+    .section {
+        background-color: #fff;
     }
     .image {
         margin-bottom: 40px;
@@ -87,5 +98,14 @@ export default {
     .btn-group {
         display: flex;
         padding: 10px 0;
+    }
+    .footer {
+        text-align: center;
+        padding: 15px 0;
+        font-size: 12px;
+        color: #ccc;
+    }
+    .footer .instructions {
+        line-height: 45px;
     }
 </style>
