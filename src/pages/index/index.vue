@@ -18,6 +18,7 @@
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <a href="/pages/share/main" class="share">去往分享页面</a>
   </div>
 </template>
 
@@ -94,7 +95,8 @@ export default {
     border: 1px solid #ccc;
 }
 
-.counter {
+.counter,
+.share {
     display: inline-block;
     margin: 10px auto;
     padding: 5px 10px;
