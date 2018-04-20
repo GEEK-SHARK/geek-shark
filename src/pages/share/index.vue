@@ -10,8 +10,8 @@
         </div>
         <div class="share">
             <div class="btn-group">
-                <button size="mini" open-type="share" type="default" plain="true" @click="share($event)">分享到群里</button>
-                <button size="mini" type="default" plain="true" @click="goHome">我也要创建Home</button>
+                <button size="mini" open-type="share" plain="true" @click="share($event)">分享到群里</button>
+                <button size="mini" plain="true" @click="goHome">我也要创建Home</button>
             </div>
         </div>
     </div>

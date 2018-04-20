@@ -1,19 +1,17 @@
 <template>
     <div>
-        <div class="viewed">
-            <p class="count">
-                已查看{{list.length}}人
-            </p>
-            <ul class="friends">
-                <li v-for="(item, index) in list" :key="index" class="friend">
-                    <span class="userinfo-portrait">
-                        <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-                    </span>
-                    <span class="userinfo-nickname">{{userInfo.nickName}}</span>
-                    <span class="userinfo-time">4月20日 11:15:15</span>
-                </li>
-            </ul>
-        </div>
+        <p class="count">
+            已查看{{list.length}}人
+        </p>
+        <ul>
+            <li v-for="(item, index) in list" :key="index" class="friend">
+                <span class="userinfo-portrait">
+                    <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
+                </span>
+                <span class="userinfo-nickname">{{userInfo.nickName}}</span>
+                <span class="userinfo-time">4月20日 11:15:15</span>
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -48,7 +46,7 @@ export default {
   border-radius: 50%;
 }
 .userinfo-nickname {
-  width: 170px;
+  width: 190px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space:nowrap;

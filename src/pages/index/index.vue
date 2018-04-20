@@ -45,7 +45,7 @@
             <a href="/pages/leaderboard/main"><img class="button_img" src="https://cdn4.iconfinder.com/data/icons/people-37/512/38-128.png" alt=""></a>
         </li>
         <li>
-            <button class="share-btn" open-type="share" size="mini" type="default" plain="true" @click="share($event)"><img class="button_img" src="https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/Share-128.png" alt=""></button>
+            <button class="share-btn" open-type="share" size="mini" plain="true" @click="share($event)"><img class="button_img" src="https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/Share-128.png" alt=""></button>
         </li>
         </ul>
     </div>
