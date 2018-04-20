@@ -7,10 +7,10 @@
 
 <script>
 import viewed from '@/components/viewed'
-import { onShare } from "../../utils/share"
+import {onShare} from '../../utils/share'
 export default {
     onShareAppMessage(res) {
-        return onShare(res, "fromID")
+        return onShare(res, 'fromID')
     },
     onLoad(e) {
         console.log(JSON.stringify(e))
@@ -18,12 +18,12 @@ export default {
     data() {
         return {
             userInfo: {},
-            list: [{},{},{},{}]
+            list: [{}, {}, {}, {}],
         }
     },
 
     components: {
-        viewed
+        viewed,
     },
 
     methods: {
@@ -36,6 +36,7 @@ export default {
                 success: () => {
                     wx.getUserInfo({
                         success: res => {
+                            console.log('====>', res.userInfo)
                             this.userInfo = res.userInfo
                         },
                     })
@@ -55,14 +56,14 @@ export default {
 </script>
 
 <style>
-    .container {
-        padding: 0;
-    }
-    .home {
-        display: inline-block;
-        margin: 20px auto;
-        padding: 5px 10px;
-        color: blue;
-        border: 1px solid blue;
-    }
+.container {
+    padding: 0;
+}
+.home {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 5px 10px;
+    color: blue;
+    border: 1px solid blue;
+}
 </style>

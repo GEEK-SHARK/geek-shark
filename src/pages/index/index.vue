@@ -53,6 +53,7 @@
 <script>
 import card from '@/components/card'
 import {onShare} from '../../utils/share'
+
 export default {
     onShareAppMessage(res) {
         return onShare(res, 'fromID')
@@ -79,6 +80,7 @@ export default {
                 success: () => {
                     wx.getUserInfo({
                         success: res => {
+                            console.log('====>', res)
                             this.userInfo = res.userInfo
                         },
                     })
