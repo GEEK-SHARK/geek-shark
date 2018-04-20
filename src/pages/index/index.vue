@@ -1,16 +1,15 @@
 <template>
-  <div class="container" @click="clickHandle('test click', $event)">
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
+  <div class="container" >
+  <div>
+    <span class="power">能量</span>
+    <input type="text" value="279" class="power_value"/>
+    <span class="coin">金币</span>
+    <input type="text" value="279" class="coin_value"/>
+  </div>
+  <div class="image">
+    <img src="../../../static/u12.jpg" alt="">
+    <div class="view_button">
+      <a href="#">👀</a>
     </div>
 
     <form class="form-container">
@@ -19,6 +18,42 @@
     </form>
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
     <a href="/pages/share/main" class="share">去往分享页面</a>
+  </div>
+  <div class="game_item_container">
+    <ul class="game_item">
+      <li>
+        <div>
+          <img src="../../../static/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+          <span>严选沙发</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src="../../../static/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+          <span>严选沙发</span>
+        </div>
+      </li>
+      <li>
+        <div>
+          <img src="../../../static/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
+          <span>严选沙发</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="button_groups">
+    <ul>
+      <li>
+        <a href="">商城</a>
+      </li>
+      <li>
+        <a href="">好友</a>
+      </li>
+      <li>
+        <a href="">分享</a>
+      </li>
+    </ul>
+  </div>
   </div>
 </template>
 
@@ -67,12 +102,88 @@ export default {
 </script>
 
 <style scoped>
+.container {
+    padding: 10px;
+}
+.power {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: bottom;
+    font-size: 14px;
+}
+.power_value {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: bottom;
+    width: 60px;
+    background: #fff;
+    padding: 0 10px 0 0;
+    font-size: 14px;
+}
+.coin {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: bottom;
+    font-size: 14px;
+}
+.coin_value {
+    display: inline-block;
+    width: 128rpx;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: bottom;
+    width: 60px;
+    background: #fff;
+    padding: 0 10px 0 0;
+    font-size: 14px;
+}
+.image {
+    position: relative;
+}
+.image .view_button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game_item li {
+    float: left;
+}
+
+.game_item li div {
+    text-align: center;
+}
+
+.game_item li span {
+    font-size: 12px;
+}
 .userinfo {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.game_item_container {
+    clear: both;
+}
+.game_item {
+    background: rgb(242, 242, 242);
+}
+.game_item::after {
+    clear: both;
+}
+.game_item img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
 .userinfo-avatar {
     width: 128rpx;
     height: 128rpx;
@@ -102,5 +213,9 @@ export default {
     padding: 5px 10px;
     color: blue;
     border: 1px solid blue;
+}
+.button_groups {
+    margin-top: 150px;
+    font-size: 14px;
 }
 </style>

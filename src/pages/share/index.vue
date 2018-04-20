@@ -45,6 +45,9 @@ export default {
 </script>
 
 <style>
+    .container {
+        padding: 0;
+    }
     .home {
         display: inline-block;
         margin: 20px auto;
