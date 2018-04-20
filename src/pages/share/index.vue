@@ -28,10 +28,10 @@
 
 <script>
 import viewed from '@/components/viewed'
-import { onShare } from "../../utils/share"
+import {onShare} from '../../utils/share'
 export default {
     onShareAppMessage(res) {
-        return onShare(res,this.userInfo.nickName, "fromID")
+        return onShare(res, this.userInfo.nickName, 'fromID')
     },
     onLoad(e) {
         console.log(JSON.stringify(e))
@@ -39,12 +39,12 @@ export default {
     data() {
         return {
             userInfo: {},
-            list: [{},{},{},{}]
+            list: [{}, {}, {}, {}],
         }
     },
 
     components: {
-        viewed
+        viewed,
     },
 
     methods: {
@@ -54,6 +54,7 @@ export default {
                 success: () => {
                     wx.getUserInfo({
                         success: res => {
+                            console.log('====>', res.userInfo)
                             this.userInfo = res.userInfo
                         },
                     })
@@ -66,7 +67,7 @@ export default {
         goHome() {
             const url = '../index/main'
             wx.navigateTo({url})
-        }
+        },
     },
 
     created() {
@@ -77,40 +78,40 @@ export default {
 </script>
 
 <style>
-    .container {
-        background-color: #f4f4f4;
-        padding: 0;
-    }
-    .section {
-        background-color: #fff;
-    }
-    .viewed {
-        margin-top: 10px;
-    }
-    .image {
-        margin-bottom: 40px;
-        padding: 0 10px;
-    }
-    .userInfo {
-        margin-bottom: 20px;
-        text-align: right;
-        padding-right: 10px;
-    }
-    .share {
-        margin: 0 10px;
-        border-top: 1px solid #d9d9d9;
-    }
-    .btn-group {
-        display: flex;
-        padding: 20px 0 30px;
-    }
-    .footer {
-        text-align: center;
-        padding: 15px 0;
-        font-size: 12px;
-        color: #ccc;
-    }
-    .footer .instructions {
-        line-height: 45px;
-    }
+.container {
+    background-color: #f4f4f4;
+    padding: 0;
+}
+.section {
+    background-color: #fff;
+}
+.viewed {
+    margin-top: 10px;
+}
+.image {
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+.userInfo {
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+.share {
+    margin: 0 10px;
+    border-top: 1px solid #d9d9d9;
+}
+.btn-group {
+    display: flex;
+    padding: 20px 0 30px;
+}
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 12px;
+    color: #ccc;
+}
+.footer .instructions {
+    line-height: 45px;
+}
 </style>
