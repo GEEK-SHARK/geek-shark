@@ -86,7 +86,7 @@ export default {
                         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Lo_jr4vafbd8jYB20ozb2at3hV3_ak3Ro7zU2RCJyRX4c41',
                     nickName: '二削皮',
                     worth: '539.50万',
-                },
+                }
             ],
             type: 0,
         }

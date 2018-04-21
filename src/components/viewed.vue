@@ -6,10 +6,10 @@
         <ul>
             <li v-for="(item, index) in list" :key="index" class="friend">
                 <span class="userinfo-portrait">
-                    <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
+                    <img class="userinfo-avatar" v-if="item.avatarUrl" :src="item.avatarUrl" background-size="cover" />
                 </span>
-                <span class="userinfo-nickname">{{userInfo.nickName}}</span>
-                <span class="userinfo-time">4月20日 11:15:15</span>
+                <span class="userinfo-nickname">{{item.nickName}}</span>
+                <span class="userinfo-time">{{item.time}}</span>
             </li>
         </ul>
     </div>

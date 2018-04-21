@@ -1,20 +1,21 @@
 <template>
 <div class="container">
-    <!-- <a href="/pages/share/main">去分享页</a> -->
-  <div class="header_container">
-    <span class="power">市值</span>
-    <input type="text" value="380万" class="power_value" />
-    <span class="coin">金币</span>
-    <input type="text" value="279" class="coin_value" />
-    <span @click="addCoin()" class="add_coin">+</span>
-  </div>
   <div class="image">
     <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="" @click="changeGameItem()">
     <div class="view_button">
       <a href="/pages/share/main">👀</a>
     </div>
   </div>
-  <div style="width: 100%; height: 8px;background: #eee;">
+  <div class="header_container">
+    <span class="power">市值</span>
+    <span class="power_value">789.50万</span>
+    <!-- <input type="text" value="380万" class="power_value" /> -->
+    <span class="coin">金币</span>
+    <span class="coin_value">279</span>
+    <!-- <input type="text" value="279" class="coin_value" /> -->
+    <span @click="addCoin()" class="add_coin">+</span>
+  </div>
+  <div style="width: 100%; height: 8px;background: #f4f4f4;">
   </div>
   <div class="game_item_container" v-if="type == 'game_item'">
     <div class="game_item_header">
@@ -48,8 +49,6 @@
   </div>
   <task v-if="type == 'task_items'"></task>
 
-  <div style="width: 100%; height: 8px;background: #eee;">
-  </div>
   <div class="button_groups">
     <ul>
       <li>
@@ -131,52 +130,36 @@ export default {
 <style scoped>
 .container {
     padding: 0;
+    margin-bottom: 40px;
 }
 
 .header_container {
     padding: 0 10px;
 }
 
-.power {
+.header_container .power,
+.header_container .power_value,
+.header_container .coin,
+.header_container .coin_value {
     display: inline-block;
+    width: 32px;
     height: 40px;
     line-height: 40px;
     vertical-align: bottom;
     font-size: 14px;
 }
 
-.power_value {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    vertical-align: bottom;
-    width: 60px;
-    background: #fff;
-    padding: 0 10px 0 0;
-    font-size: 14px;
+.header_container .power_value {
+    width: 80px;
+    color: #1aac19;
 }
 
-.coin {
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    vertical-align: bottom;
-    font-size: 14px;
+.header_container .coin_value {
+    width: 140rpx;
+    color: #1aac19;
 }
 
-.coin_value {
-    display: inline-block;
-    width: 128rpx;
-    height: 40px;
-    line-height: 40px;
-    vertical-align: bottom;
-    width: 60px;
-    background: #fff;
-    padding: 0 10px 0 0;
-    font-size: 14px;
-}
-
-.add_coin {
+.header_container .add_coin {
     display: inline-block;
     height: 40px;
     line-height: 40px;
@@ -318,7 +301,7 @@ export default {
 
 .button_groups {
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     right: 10px;
     height: 40px;
     font-size: 14px;

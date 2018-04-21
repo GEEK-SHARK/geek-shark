@@ -45,7 +45,42 @@ export default {
     data() {
         return {
             userInfo: {},
-            list: [{}, {}, {}, {}],
+            list: [{
+                    avatarUrl:
+                        'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ervyMJ8rP0ialLQ50ZeeAYzZHskRia8QjgePdibaZciat3eK0icfh9uSnyUakXVpTEQg7ftNAXTKb6Sb6g/0',
+                    nickName: '金炳',
+                    time: '4月22日 10:32:20',
+                },{
+                    avatarUrl:
+                        'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoD19gq63hC5nciceRnSAMkbwM0M8Q3AjG5bgTibKfqiafL6v0jb3EAQC0oVPEfibJmYdCGRtp30Svcsw/0',
+                    nickName: '吃雪怪君',
+                    time: '4月22日 10:31:15',
+                },
+                {
+                    avatarUrl:
+                        'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0iaMTicE4P8EdORX7zeMuLzUiabZvvkJynpdmvc7L5KHYd0UTWAPZhQNhsHIHicc3BDWXjDm9ueYTWA/0',
+                    nickName: 'W',
+                    time: '4月22日 10:31:09',
+                },
+                {
+                    avatarUrl:
+                        'https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIu2y3ibpr0UiaTm6nib8GpEd7ecgLQBOibYNtzGXquA1KvicuESLhByv0OqLS7ASLsZoftjS6BG7UBMLw/0',
+                    nickName: '楼下小黑',
+                    time: '4月22日 10:31:07',
+                },
+                {
+                    avatarUrl:
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Lo_jr4vafbd8jYB20ozb2at3hV3_ak3Ro7zU2RCJyRX4c41',
+                    nickName: '二削皮',
+                    time: '4月22日 10:30:57',
+                },
+                {
+                    avatarUrl:
+                        'http://scimg.158pic.com/touxiang/201709/2017093023374596.jpg',
+                    nickName: '维城',
+                    time: '4月22日 10:30:53',
+                }
+            ]
         }
     },
 
