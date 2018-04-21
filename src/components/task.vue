@@ -8,17 +8,47 @@
         <li class="task_item">
           <div>
             <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-102904%402x.png" alt="">
+                <img src="https://png.icons8.com/nolan/64/000000/today.png" alt="">
             </span>
             <span class="task_title">连续登录</span>
             <span class="task_description">登录获取金币</span>
-            <span class="task_value">+2金币</span>
+            <span class="task_value">1~3金币</span>
           </div>
         </li>
-        <li class="task_item task_item2">
+        <li class="task_item">
           <div>
             <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-105501%402x.png" alt="">
+                <img src="https://png.icons8.com/nolan/64/000000/walking.png" alt="">
+            </span>
+            <span class="task_title">每日微信运动</span>
+            <span class="task_description">微信步数获取金币</span>
+            <span class="task_value">1~3金币</span>
+          </div>
+        </li>
+        <li class="task_item task_item3">
+          <div>
+            <span class="task_img">
+                <img src="https://png.icons8.com/nolan/64/000000/heart-health.png" alt="">
+            </span>
+            <span class="task_title">早睡早起</span>
+            <span class="task_description">规定时间打卡获取</span>
+            <span class="task_value">+1金币</span>
+          </div>
+        </li>
+        <li class="task_item">
+          <div>
+            <span class="task_img">
+                <img src="https://png.icons8.com/nolan/64/000000/shopping-cart.png" alt="">
+            </span>
+            <span class="task_title">严选购物</span>
+            <span class="task_description">严选购物获取金币</span>
+            <span class="task_value">金额/10金币</span>
+          </div>
+        </li>
+        <li class="task_item">
+          <div>
+            <span class="task_img">
+                <img src="https://png.icons8.com/office/40/000000/weixing.png" alt="">
             </span>
             <span class="task_title">关注微信公众号</span>
             <span class="task_description">关注获取金币</span>
@@ -28,51 +58,11 @@
         <li class="task_item task_item3">
           <div>
             <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-105611%402x.png" alt="">
-            </span>
-            <span class="task_title">每日微信运动</span>
-            <span class="task_description">微信步数获取金币</span>
-            <span class="task_value">+2金币</span>
-          </div>
-        </li>
-        <li class="task_item">
-          <div>
-            <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-105519%402x.png" alt="">
-            </span>
-            <span class="task_title">严选购物</span>
-            <span class="task_description">严选购物获取金币</span>
-            <span class="task_value">+5金币</span>
-          </div>
-        </li>
-        <li class="task_item">
-          <div>
-            <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-102904%402x.png" alt="">
+                <img src="https://png.icons8.com/nolan/64/000000/share.png" alt="">
             </span>
             <span class="task_title">游戏分享</span>
             <span class="task_description">分享游戏获取金币</span>
-            <span class="task_value">+2金币</span>
-          </div>
-        </li>
-        <li class="task_item task_item6">
-          <div>
-            <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-105519%402x.png" alt="">
-            </span>
-            <span class="task_title">早睡打卡</span>
-            <span class="task_description">20:00~22:00打卡获取</span>
-            <span class="task_value">+2金币</span>
-          </div>
-        </li>
-        <li class="task_item">
-          <div>
-            <span class="task_img">
-                <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WX20180421-105519%402x.png" alt="">
-            </span>
-            <span class="task_title">早起打卡</span>
-            <span class="task_description">06:00~08:00打卡获取</span>
-            <span class="task_value">+2金币</span>
+            <span class="task_value">1~5金币</span>
           </div>
         </li>
       </ul>
@@ -140,22 +130,13 @@ export default {
     display: block;
     text-align: center;
     font-size: 12px;
-    background: goldenrod;
+    background-color: #0a42cc;
+    color: #fff;
     opacity: 0.7;
-    margin: 5px 10px 0;
-}
-.task_item2 img {
-    width: 40px;
-    height: 35px;
-}
-.task_item3 img {
-    width: 45px;
-    height: 35px;
+    margin: 5px 15px 0;
+    padding: 2px 0;
 }
 .task_item3 {
-    border-right: none;
-}
-.task_item6 {
     border-right: none;
 }
 .clear_fix {

@@ -14,12 +14,12 @@
     </div>
   </div>
   <div class="header_container">
+    <img class="img" src="https://png.icons8.com/windows/50/000000/money-bag.png">
     <span class="power">市值</span>
     <span class="power_value">789.50万</span>
-    <!-- <input type="text" value="380万" class="power_value" /> -->
+    <img class="img" src="https://png.icons8.com/dotty/50/000000/expensive.png">
     <span class="coin">金币</span>
     <span class="coin_value">279</span>
-    <!-- <input type="text" value="279" class="coin_value" /> -->
     <span @click="addCoin()" class="add_coin">+</span>
   </div>
   <div style="width: 100%; height: 8px;background: #f4f4f4;">
@@ -155,14 +155,22 @@ export default {
     vertical-align: bottom;
     font-size: 14px;
 }
+.header_container .img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -4px;
+    margin-right: 3px;
+}
 
 .header_container .power_value {
-    width: 80px;
+    width: 70px;
     color: #1aac19;
 }
 
 .header_container .coin_value {
-    width: 140rpx;
+    width: 70px;
     color: #1aac19;
 }
 
@@ -177,6 +185,7 @@ export default {
 .image {
     position: relative;
     padding: 0 10px;
+    /* height: 260px; */
 }
 
 .image .view_button {
