@@ -4,7 +4,7 @@
     <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WechatIMG181.jpeg" alt="" @click="changeGameItem()">
     <div class="view_button">
       <a href="/pages/share/main">
-        <img class="eye" src="https://png.icons8.com/ios/64/000000/street-view-filled.png" />
+        <img class="eye" src="https://png.icons8.com/ios/64/000000/street-view-filled.png" background-size="cover"/>
     </a>
     </div>
   </div>
@@ -55,14 +55,14 @@
     <ul>
       <li>
         <a href="/pages/mall/main">
-                <img class="button_img" src="https://cdn1.iconfinder.com/data/icons/finance-banking-tiny-icons/16/shopping-128.png" alt="">
+                <img class="button_img" src="https://png.icons8.com/office/40/000000/small-business.png" alt="">
             </a>
       </li>
       <li>
-        <a href="/pages/leaderboard/main"><img class="button_img" src="https://cdn4.iconfinder.com/data/icons/people-37/512/38-128.png" alt=""></a>
+        <a href="/pages/leaderboard/main"><img class="button_img" src="https://png.icons8.com/dusk/64/000000/groups.png" alt=""></a>
       </li>
       <li>
-        <button class="share-btn" open-type="share" size="mini" plain="true" @click="share($event)"><img class="button_img" src="https://cdn3.iconfinder.com/data/icons/pictofoundry-pro-vector-set/512/Share-128.png" alt=""></button>
+        <button class="share-btn" open-type="share" size="mini" plain="true" @click="share($event)"><img class="button_img" src="https://png.icons8.com/cotton/64/000000/share.png" alt=""></button>
       </li>
     </ul>
   </div>
@@ -180,11 +180,13 @@ export default {
 .image {
     position: relative;
     padding: 0 10px;
-    /* height: 260px; */
+    height: 260px;
+    overflow: hidden;
 }
 
 .image img {
     width: 100%;
+    height: 260px;
     border-radius: 5px;
 }
 .image .view_button {
@@ -219,8 +221,6 @@ export default {
 .game_item li {
     display: inline-block;
     position: relative;
-    /* width: 100px; */
-    /* height: 100px; */
     margin-left: 20px;
 }
 
@@ -317,7 +317,7 @@ export default {
 
 .button_groups {
     position: fixed;
-    bottom: 0;
+    bottom: -3px;
     right: 10px;
     height: 40px;
     font-size: 14px;
@@ -329,7 +329,7 @@ export default {
 
 .button_groups li {
     float: right;
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .button_groups li a {
@@ -339,7 +339,7 @@ export default {
 .button_groups li .button_img {
     width: 32px;
     height: 32px;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .button_groups li .share-btn {
