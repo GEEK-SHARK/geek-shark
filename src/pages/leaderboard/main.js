@@ -6,6 +6,6 @@ app.$mount()
 
 export default {
   config: {
-      navigationBarTitleText: '严选圈'
-  }
+    navigationBarTitleText: '严选圈富豪榜',
+  },
 }
