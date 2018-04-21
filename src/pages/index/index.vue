@@ -1,10 +1,11 @@
 <template>
   <div class="container" >
-    <div>
-        <span class="power">能量</span>
-        <input type="text" value="279" class="power_value"/>
+    <div class="header_container">
+        <span class="power">市值</span>
+        <input type="text" value="380万" class="power_value"/>
         <span class="coin">金币</span>
         <input type="text" value="279" class="coin_value"/>
+        <span @click="addCoin()" class="add_coin">+</span>
     </div>
     <div class="image">
         <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="">
@@ -12,28 +13,52 @@
         <a href="/pages/share/main">👀</a>
         </div>
     </div>
-    <div class="game_item_container">
+    <div style="width: 100%; height: 8px;background: #eee;">
+    </div>
+    <div class="game_item_container" v-if="type == 'game_item'">
+        <div class="game_item_header">
+          <h1>待选商品</h1>
+        </div>
         <ul class="game_item">
         <li>
             <div>
-            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
-            <span>严选沙发</span>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
+            <span>沙发1</span>
             </div>
         </li>
         <li>
             <div>
-            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
-            <span>严选沙发</span>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/4b4dc24c777115efe22478c5601f1ea9%20%281%29.png" alt="">
+            <span>沙发2</span>
             </div>
         </li>
         <li>
             <div>
-            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="" width="100px;" height="100px;">
-            <span>严选沙发</span>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
+            <span>沙发3</span>
+            </div>
+        </li>
+        <li>
+            <div>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/a67a775fcb0712b691a492cc387d1dc4.png" alt="">
+            <span>沙发4</span>
+            </div>
+        </li>
+        <li>
+            <div>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/cb05cb5eb82f0d9c6f5c295731abb7f7.png" alt="">
+            <span>沙发5</span>
+            </div>
+        </li>
+        <li>
+            <div>
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/e21b58dc1fe7de3228ab9f45bbeec0d5.png" alt="">
+            <span>沙发6</span>
             </div>
         </li>
         </ul>
     </div>
+    <task v-if="type == 'task_items'"></task>
     <div class="button_groups">
         <ul>
         <li>
@@ -55,6 +80,7 @@
 <script>
 import card from '@/components/card'
 import {onShare} from '../../utils/share'
+import task from '@/components/task'
 
 export default {
     onShareAppMessage(res) {
@@ -64,11 +90,13 @@ export default {
         return {
             motto: 'Hello World',
             userInfo: {},
+            type: 'game_item',
         }
     },
 
     components: {
         card,
+        task,
     },
 
     methods: {
@@ -92,6 +120,9 @@ export default {
         share(res) {
             onShare(res, this.userInfo.nickName, 'fromID')
         },
+        addCoin() {
+            this.type = 'task_items'
+        },
     },
 
     created() {
@@ -103,7 +134,10 @@ export default {
 
 <style scoped>
 .container {
-    padding: 10px;
+    padding: 0;
+}
+.header_container {
+    padding: 0 10px;
 }
 .power {
     display: inline-block;
@@ -140,8 +174,16 @@ export default {
     padding: 0 10px 0 0;
     font-size: 14px;
 }
+.add_coin {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: bottom;
+    font-size: 14px;
+}
 .image {
     position: relative;
+    padding: 0 10px;
 }
 .image .view_button {
     position: absolute;
@@ -156,6 +198,25 @@ export default {
 
 .game_item li {
     float: left;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.game_item li img {
+    width: 100px;
+    height: 80px;
+}
+
+.game_item li span {
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+    color: #999;
 }
 
 .game_item li div {
@@ -172,6 +233,13 @@ export default {
 }
 .game_item_container {
     overflow: hidden;
+    padding: 0 auto;
+}
+
+.game_item_header {
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    padding: 10px;
 }
 .game_item {
     background: rgb(242, 242, 242);

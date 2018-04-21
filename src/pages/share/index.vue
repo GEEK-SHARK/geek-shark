@@ -54,6 +54,13 @@ export default {
                 success: () => {
                     wx.getUserInfo({
                         success: res => {
+                            // wx.request({
+                            //     url: 'http://10.242.129.218:8080/user',
+                            //     data: res.userInfo,
+                            //     success: res => {
+                            //         console.log(res)
+                            //     },
+                            // })
                             console.log('====>', res.userInfo)
                             this.userInfo = res.userInfo
                         },
