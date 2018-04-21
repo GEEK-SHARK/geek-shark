@@ -8,7 +8,7 @@
     <span @click="addCoin()" class="add_coin">+</span>
   </div>
   <div class="image">
-    <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="" @click="changeGameItem()">
+    <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WechatIMG181.jpeg" alt="" @click="changeGameItem()">
     <div class="view_button">
       <a href="/pages/share/main">👀</a>
     </div>
@@ -75,32 +75,32 @@
 </template>
 
 <script>
-import card from "@/components/card"
-import { onShare } from "../../utils/share"
-import task from "@/components/task"
+import card from '@/components/card'
+import {onShare} from '../../utils/share'
+import task from '@/components/task'
 
 export default {
     onShareAppMessage(res) {
-        return onShare(res, this.userInfo.nickName, "fromID")
+        return onShare(res, this.userInfo.nickName, 'fromID')
     },
     data() {
         return {
-            motto: "Hello World",
+            motto: 'Hello World',
             userInfo: {},
-            type: "task_items"
+            type: 'task_items',
         }
     },
 
     components: {
         card,
-        task
+        task,
     },
 
     methods: {
         bindViewTap() {
-            const url = "../logs/main"
+            const url = '../logs/main'
             wx.navigateTo({
-                url
+                url,
             })
         },
         getUserInfo() {
@@ -109,28 +109,28 @@ export default {
                 success: () => {
                     wx.getUserInfo({
                         success: res => {
-                            console.log("====>", res)
+                            console.log('====>', res)
                             this.userInfo = res.userInfo
-                        }
+                        },
                     })
-                }
+                },
             })
         },
         share(res) {
-            onShare(res, this.userInfo.nickName, "fromID")
+            onShare(res, this.userInfo.nickName, 'fromID')
         },
         addCoin() {
-            this.type = "task_items"
+            this.type = 'task_items'
         },
         changeGameItem() {
-            this.type = "game_item"
-        }
+            this.type = 'game_item'
+        },
     },
 
     created() {
         // 调用应用实例的方法获取全局数据
         this.getUserInfo()
-    }
+    },
 }
 </script>
 
@@ -194,7 +194,7 @@ export default {
     color: springgreen;
     border: 1px solid springgreen;
     position: absolute;
-    top:3px;
+    top: 3px;
     right: 3px;
 }
 .item-block {
