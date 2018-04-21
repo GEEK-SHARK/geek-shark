@@ -59,7 +59,7 @@
   <div class="button_groups">
     <ul>
       <li>
-        <a href="/pages/store/main">
+        <a href="/pages/mall/main">
                 <img class="button_img" src="https://cdn1.iconfinder.com/data/icons/finance-banking-tiny-icons/16/shopping-128.png" alt="">
             </a>
       </li>
