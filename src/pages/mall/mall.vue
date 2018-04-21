@@ -163,13 +163,12 @@ header {
 }
 .container2 {
     margin-top: 5px;
-    padding: 0 5px;
 }
 .container2 .item_title {
     text-align: center;
     font-size: 14px;
     color: #999;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: block;
     border-top: 1px solid #eee;
     padding-top: 3px;
@@ -267,7 +266,7 @@ header {
 }
 .buy-block {
     position: absolute;
-    top: 85px;
+    top: 88px;
     font-size: 12px;
     color: #999;
     text-align: center;
