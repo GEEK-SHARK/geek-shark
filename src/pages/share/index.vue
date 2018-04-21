@@ -6,7 +6,7 @@
         </div>
         <div class="userInfo">
             <p>{{userInfo.nickName}}</p>
-            <p>2018年3月16日</p>
+            <p>2018年4月22日</p>
         </div>
         <div class="share">
             <div class="btn-group">
@@ -19,7 +19,7 @@
         <viewed :list="list" :userInfo="userInfo"></viewed>
     </div>
     <div class="footer">
-        <p class="instructions">底部随便说点什么吧</p>
+        <p class="instructions">我们的态度是健康、积极</p>
         <p>网易公司版权所有</p>
         <p>@2018 GEEK SHARK.All Rights Reserved</p>
     </div>
