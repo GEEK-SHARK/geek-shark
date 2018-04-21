@@ -96,14 +96,14 @@ export default {
             },
             {
                 avatarUrl:
-                    'http://www.wxgzh.net/uploadfile/2016/1004/20161004073943120.jpg',
-                nickName: '野菜不如香菜香',
+                    'https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WechatIMG368.jpeg',
+                nickName: 'Smile_Cuz',
                 worth: '1.90亿',
             },
             {
                 avatarUrl:
                     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXh9yQEHKK-nc2mSsB9i4Tb_F7oU7LcTMyP0ifT28Zri267lOm',
-                nickName: '一个男孩',
+                nickName: '熊哈孩',
                 worth: '1.50亿',
             },
             {
