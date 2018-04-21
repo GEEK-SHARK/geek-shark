@@ -3,6 +3,12 @@
     <div class="section">
         <div class="image">
             <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" width="100%" height="100%" background-size="cover">
+            <div class="like-block">
+                <span>1234 人喜欢</span>
+                <button class="like-btn">
+                    点赞
+                </button>
+            </div>
         </div>
         <div class="userInfo">
             <p>{{userInfo.nickName}}</p>
@@ -27,11 +33,11 @@
 </template>
 
 <script>
-import viewed from '@/components/viewed'
-import {onShare} from '../../utils/share'
+import viewed from "@/components/viewed"
+import { onShare } from "../../utils/share"
 export default {
     onShareAppMessage(res) {
-        return onShare(res, this.userInfo.nickName, 'fromID')
+        return onShare(res, this.userInfo.nickName, "fromID")
     },
     onLoad(e) {
         console.log(JSON.stringify(e))
@@ -39,12 +45,12 @@ export default {
     data() {
         return {
             userInfo: {},
-            list: [{}, {}, {}, {}],
+            list: [{}, {}, {}, {}]
         }
     },
 
     components: {
-        viewed,
+        viewed
     },
 
     methods: {
@@ -61,26 +67,26 @@ export default {
                             //         console.log(res)
                             //     },
                             // })
-                            console.log('====>', res.userInfo)
+                            console.log("====>", res.userInfo)
                             this.userInfo = res.userInfo
-                        },
+                        }
                     })
-                },
+                }
             })
         },
         share(res) {
-            onShare(res, this.userInfo.nickName, 'fromID')
+            onShare(res, this.userInfo.nickName, "fromID")
         },
         goHome() {
-            const url = '../index/main'
-            wx.navigateTo({url})
-        },
+            const url = "../index/main"
+            wx.navigateTo({ url })
+        }
     },
 
     created() {
         // 调用应用实例的方法获取全局数据
         this.getUserInfo()
-    },
+    }
 }
 </script>
 
@@ -98,6 +104,21 @@ export default {
 .image {
     margin-bottom: 40px;
     padding: 0 10px;
+    position: relative;
+}
+.like-block {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+.like-block .like-btn {
+    border: 1px solid orange;
+    color: orange;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    width: 50px;
+    padding: 0;
 }
 .userInfo {
     margin-bottom: 20px;

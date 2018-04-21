@@ -1,5 +1,6 @@
 <template>
 <div class="container">
+    <a href="/pages/share/main">去分享页</a>
   <div class="header_container">
     <span class="power">市值</span>
     <input type="text" value="380万" class="power_value" />
