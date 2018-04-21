@@ -41,11 +41,8 @@
 <script>
 import {onShare} from '../../utils/share'
 export default {
-    onShareAppMessage(res) {
-        return onShare(res, this.userInfo.nickName, 'fromID')
-    },
     onLoad(e) {
-        console.log(JSON.stringify(e))
+        wx.hideShareMenu()
     },
     data() {
         const list = [{

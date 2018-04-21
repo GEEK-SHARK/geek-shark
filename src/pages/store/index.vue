@@ -123,7 +123,7 @@ export default {
             })
         },
         share(res) {
-            onShare(res, this.userInfo.nickName, 'fromID')
+            onShare(res, this.userInfo.nickName, this.userInfo.gender, 'fromID')
         },
         addCoin() {
             this.type = 'task_items'

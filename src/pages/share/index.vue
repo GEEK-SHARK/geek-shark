@@ -34,7 +34,7 @@ import viewed from '@/components/viewed'
 import {onShare} from '../../utils/share'
 export default {
     onShareAppMessage(res) {
-        return onShare(res, this.userInfo.nickName, 'fromID')
+        return onShare(res, this.userInfo.nickName, this.userInfo.gender, 'fromID')
     },
     onLoad(e) {
         console.log(JSON.stringify(e))
@@ -101,7 +101,7 @@ export default {
             })
         },
         share(res) {
-            onShare(res, this.userInfo.nickName, 'fromID')
+            onShare(res, this.userInfo.nickName, this.userInfo.gender, 'fromID')
         },
         goHome() {
             const url = '../index/main'
