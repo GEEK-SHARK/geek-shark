@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <div class="header_container">
-    <span class="power">市值</span>
+    <span class="power">市值111</span>
     <input type="text" value="380万" class="power_value" />
     <span class="coin">金币</span>
     <input type="text" value="279" class="coin_value" />
@@ -65,7 +65,7 @@
   <div class="button_groups">
     <ul>
       <li>
-        <a href="/pages/store/main">
+        <a href="">
                 <img class="button_img" src="https://cdn1.iconfinder.com/data/icons/finance-banking-tiny-icons/16/shopping-128.png" alt="">
             </a>
       </li>
@@ -329,7 +329,6 @@ export default {
 .button_groups li .button_img {
     width: 32px;
     height: 32px;
-    opacity: 0.3;
 }
 
 .button_groups li .share-btn {
