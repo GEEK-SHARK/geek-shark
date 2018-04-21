@@ -19,44 +19,31 @@
     <div class="game_item_header">
       <h1>待选商品</h1>
     </div>
+    <div class="item-block">
     <ul class="game_item">
       <li>
         <div>
           <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
-          <span>沙发1</span>
+          <span>300 金币</span>
+          <i class="al-has">已用有</i>
         </div>
       </li>
       <li>
         <div>
           <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/4b4dc24c777115efe22478c5601f1ea9%20%281%29.png" alt="">
-          <span>沙发2</span>
+          <span>800 金币</span>
+          <span class="bug">点击购买</span>
         </div>
       </li>
       <li>
         <div>
           <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
-          <span>沙发3</span>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/a67a775fcb0712b691a492cc387d1dc4.png" alt="">
-          <span>沙发4</span>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/cb05cb5eb82f0d9c6f5c295731abb7f7.png" alt="">
-          <span>沙发5</span>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/e21b58dc1fe7de3228ab9f45bbeec0d5.png" alt="">
-          <span>沙发6</span>
+          <span>1000 金币</span>
+          <span class="bug">点击购买</span>
         </div>
       </li>
     </ul>
+    </div>
   </div>
   <task v-if="type == 'task_items'"></task>
 
@@ -81,32 +68,32 @@
 </template>
 
 <script>
-import card from '@/components/card'
-import {onShare} from '../../utils/share'
-import task from '@/components/task'
+import card from "@/components/card"
+import { onShare } from "../../utils/share"
+import task from "@/components/task"
 
 export default {
     onShareAppMessage(res) {
-        return onShare(res, this.userInfo.nickName, 'fromID')
+        return onShare(res, this.userInfo.nickName, "fromID")
     },
     data() {
         return {
-            motto: 'Hello World',
+            motto: "Hello World",
             userInfo: {},
-            type: 'task_items',
+            type: "task_items"
         }
     },
 
     components: {
         card,
-        task,
+        task
     },
 
     methods: {
         bindViewTap() {
-            const url = '../logs/main'
+            const url = "../logs/main"
             wx.navigateTo({
-                url,
+                url
             })
         },
         getUserInfo() {
@@ -115,28 +102,28 @@ export default {
                 success: () => {
                     wx.getUserInfo({
                         success: res => {
-                            console.log('====>', res)
+                            console.log("====>", res)
                             this.userInfo = res.userInfo
-                        },
+                        }
                     })
-                },
+                }
             })
         },
         share(res) {
-            onShare(res, this.userInfo.nickName, 'fromID')
+            onShare(res, this.userInfo.nickName, "fromID")
         },
         addCoin() {
-            this.type = 'task_items'
+            this.type = "task_items"
         },
         changeGameItem() {
-            this.type = 'game_item'
-        },
+            this.type = "game_item"
+        }
     },
 
     created() {
         // 调用应用实例的方法获取全局数据
         this.getUserInfo()
-    },
+    }
 }
 </script>
 
@@ -211,32 +198,55 @@ export default {
     width: 100%;
     border-radius: 5px;
 }
+.al-has {
+    font-size: 10px;
+    color: springgreen;
+    border: 1px solid springgreen;
+    position: absolute;
+    top:3px;
+    right: 3px;
+}
+.item-block {
+    overflow: auto;
+    width: 100%;
+}
+.game_item {
+    overflow: hidden;
+    width: 530px;
+    white-space: nowrap;
+}
 
 .game_item li {
-    float: left;
+    display: inline-block;
     position: relative;
-    width: 100px;
-    height: 100px;
+    /* width: 100px; */
+    /* height: 100px; */
     margin-left: 20px;
 }
 
 .game_item li img {
-    width: 100px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
 }
 
 .game_item li span {
     position: absolute;
-    left: 20px;
-    top: 60px;
+    left: 40px;
+    top: 100px;
     text-align: center;
     margin-left: 10px;
     font-size: 12px;
-    color: #999;
+    color: salmon;
+}
+.game_item li span.bug {
+    border: 1px solid salmon;
+    left: 40px;
+    top: 115px;
 }
 
 .game_item li div {
     text-align: center;
+    position: relative;
 }
 
 .game_item li span {
