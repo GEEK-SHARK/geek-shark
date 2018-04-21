@@ -3,16 +3,14 @@
     <div class="section">
         <div class="image">
             <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/2018-04-21%2018_10_09.gif" background-size="cover">
-            <div class="like-block">
-                <span>1234 人喜欢</span>
-                <button class="like-btn">
-                    点赞
-                </button>
-            </div>
         </div>
-        <div class="userInfo">
-            <p>{{userInfo.nickName}}</p>
-            <p>2018年4月22日</p>
+        <div class="like-block">
+            <p>1234 人喜欢</p>
+            <span class="like-btn">
+                为Ta点赞
+                <img src="https://png.icons8.com/dusk/64/000000/good-quality.png" alt="已点赞"/>
+                <!-- <img src="https://png.icons8.com/wired/64/000000/good-quality.png"  alt="未点赞"/> -->
+            </span>
         </div>
         <div class="share">
             <div class="btn-group">
@@ -25,9 +23,7 @@
         <viewed :list="list" :userInfo="userInfo"></viewed>
     </div>
     <div class="footer">
-        <p class="instructions">我们的态度是健康、积极</p>
-        <p>网易公司版权所有</p>
-        <p>@2018 GEEK SHARK.All Rights Reserved</p>
+        我们的态度是健康、积极
     </div>
   </div>
 </template>
@@ -137,7 +133,6 @@ export default {
     margin-top: 8px;
 }
 .image {
-    margin-bottom: 40px;
     padding: 0 10px;
     position: relative;
 }
@@ -147,23 +142,21 @@ export default {
     border-radius: 3px;
 }
 .like-block {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-}
-.like-block .like-btn {
-    border: 1px solid orange;
-    color: orange;
-    font-size: 14px;
-    height: 20px;
-    line-height: 20px;
-    width: 50px;
-    padding: 0;
-}
-.userInfo {
     margin-bottom: 20px;
-    text-align: right;
+    text-align: center;
     padding-right: 10px;
+}
+.like-block p {
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+}
+.like-block .like-btn img {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    position: relative;
+    top: 8px;
 }
 .share {
     margin: 0 10px;
@@ -178,8 +171,5 @@ export default {
     padding: 15px 0;
     font-size: 12px;
     color: #ccc;
-}
-.footer .instructions {
-    line-height: 45px;
 }
 </style>

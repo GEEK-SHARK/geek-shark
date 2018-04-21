@@ -3,7 +3,9 @@
   <div class="image">
     <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/WechatIMG181.jpeg" alt="" @click="changeGameItem()">
     <div class="view_button">
-      <a href="/pages/share/main">👀</a>
+      <a href="/pages/share/main">
+        <img class="eye" src="https://png.icons8.com/ios/64/000000/street-view-filled.png" />
+    </a>
     </div>
   </div>
   <div class="header_container">
@@ -181,15 +183,20 @@ export default {
     /* height: 260px; */
 }
 
-.image .view_button {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
-
 .image img {
     width: 100%;
     border-radius: 5px;
+}
+.image .view_button {
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+}
+.image .view_button img.eye {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
 }
 .al-has {
     font-size: 10px;
