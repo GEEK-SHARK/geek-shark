@@ -329,6 +329,7 @@ export default {
 .button_groups li .button_img {
     width: 32px;
     height: 32px;
+    opacity: 0.3;
 }
 
 .button_groups li .share-btn {

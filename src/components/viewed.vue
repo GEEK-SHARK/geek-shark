@@ -23,8 +23,9 @@ export default {
 
 <style>
 .count {
-  padding: 15px 10px;
+  padding: 10px;
   color: #999;
+  font-size: 14px;
   border-bottom:1px solid #f4f4f4;
 }
 .friend {
@@ -35,14 +36,14 @@ export default {
 .userinfo-nickname,
 .userinfo-time {
   display: inline-block;
-  height: 70px;
-  line-height: 70px;
+  height: 61px;
+  line-height: 61px;
   vertical-align: top;
 }
 .userinfo-avatar {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
+  width: 45px;
+  height: 45px;
+  margin: 8px 10px;
   border-radius: 50%;
 }
 .userinfo-nickname {

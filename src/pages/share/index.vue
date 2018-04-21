@@ -93,7 +93,7 @@ export default {
     background-color: #fff;
 }
 .viewed {
-    margin-top: 10px;
+    margin-top: 8px;
 }
 .image {
     margin-bottom: 40px;

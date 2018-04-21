@@ -89,7 +89,7 @@ export default {
   background-color: #fff;
 }
 .my-rank {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding-top: 40px;
   text-align: center;
 }
@@ -118,12 +118,14 @@ export default {
   font-size: 20px;
 }
 .rank-type {
-  padding: 15px 10px;
+  padding: 10px;
   border-bottom: 1px solid #f4f4f4;
   overflow: hidden;
 }
 .rank-type .rank-txt {
-  line-height:29px;
+  position:relative;
+  top:4px;
+  font-size: 14px;
 }
 .rank-type .btn-group {
   float: right;
@@ -150,15 +152,17 @@ export default {
 .rank-item .wrap {
   margin-left: 30px;;
   border-bottom: 1px solid #f4f4f4;
-  border-bottom: 1px solid #f4f4f4;
+}
+.rank-item:last-child .wrap {
+  border-bottom: none;
 }
 .rank-item .userinfo-rank,
 .rank-item .userinfo-portrait,
 .rank-item .userinfo-nickname,
 .rank-item .userinfo-time {
   display: inline-block;
-  height: 70px;
-  line-height: 70px;
+  height: 61px;
+  line-height: 61px;
   vertical-align: top;
 }
 .rank-item .userinfo-rank {
@@ -167,9 +171,9 @@ export default {
   text-align:center;
 }
 .rank-item .userinfo-avatar {
-  width: 50px;
-  height: 50px;
-  margin: 10px;
+  width: 45px;
+  height: 45px;
+  margin: 8px 10px;
   border-radius: 4px;
 }
 .rank-item .userinfo-nickname {
