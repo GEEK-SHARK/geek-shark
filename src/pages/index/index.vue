@@ -1,5 +1,12 @@
 <template>
 <div class="container">
+  <div class="header_container">
+    <span class="power">市值</span>
+    <input type="text" value="380万" class="power_value" />
+    <span class="coin">金币</span>
+    <input type="text" value="279" class="coin_value" />
+    <span @click="addCoin()" class="add_coin">+</span>
+  </div>
   <div class="image">
     <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/u12.jpg" alt="" @click="changeGameItem()">
     <div class="view_button">
