@@ -47,7 +47,7 @@ export default {
   border-radius: 50%;
 }
 .userinfo-nickname {
-  width: 190px;
+  width: 180px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space:nowrap;

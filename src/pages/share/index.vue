@@ -5,13 +5,13 @@
             <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/2018-04-21%2018_10_09.gif" background-size="cover">
         </div>
         <div class="like-block">
-            <p>已有 {{likeCount}} 人点赞</p>
             <span class="like-btn">
                 为<span v-if="userInfo.gender==1">他</span><span v-if="userInfo.gender==2">她</span><span v-if="userInfo.gender==0">Ta</span>点赞
                 <img v-if="like" @click="iLike(false)" src="https://png.icons8.com/dusk/64/000000/good-quality.png" alt="已点赞"/>
                 <img v-if="!like" @click="iLike(true)" src="https://png.icons8.com/wired/64/000000/good-quality.png"  alt="未点赞"/>
                 <img style="display:none;" src="https://png.icons8.com/wired/64/000000/good-quality.png"  alt="未点赞"/>
             </span>
+            <span class="lick-count">已有 {{likeCount}} 人点赞</span>
         </div>
         <div class="share">
             <div class="btn-group">
@@ -142,14 +142,17 @@ export default {
     border-radius: 3px;
 }
 .like-block {
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 15px;
+    text-align: right;
     padding-right: 10px;
+    overflow: hidden;
 }
-.like-block p {
+.like-block .lick-count {
     font-size: 14px;
     color: #333;
-    text-align: right;
+    float: left;
+    line-height: 40px;
+    margin-left: 10px;;
 }
 .like-block .like-btn img {
     display: inline-block;

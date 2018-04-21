@@ -48,46 +48,127 @@ export default {
         console.log(JSON.stringify(e))
     },
     data() {
+        const list = [{
+                avatarUrl:
+                    'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoD19gq63hC5nciceRnSAMkbwM0M8Q3AjG5bgTibKfqiafL6v0jb3EAQC0oVPEfibJmYdCGRtp30Svcsw/0',
+                nickName: '吃雪怪君',
+                worth: '1000.00万',
+            },
+            {
+                avatarUrl:
+                    'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ervyMJ8rP0ialLQ50ZeeAYzZHskRia8QjgePdibaZciat3eK0icfh9uSnyUakXVpTEQg7ftNAXTKb6Sb6g/0',
+                nickName: '金炳',
+                worth: '970.00万',
+            },
+            {
+                avatarUrl:
+                    'https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIu2y3ibpr0UiaTm6nib8GpEd7ecgLQBOibYNtzGXquA1KvicuESLhByv0OqLS7ASLsZoftjS6BG7UBMLw/0',
+                nickName: '楼下小黑',
+                worth: '890.50万',
+            },
+            {
+                avatarUrl:
+                    'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0iaMTicE4P8EdORX7zeMuLzUiabZvvkJynpdmvc7L5KHYd0UTWAPZhQNhsHIHicc3BDWXjDm9ueYTWA/0',
+                nickName: 'W',
+                worth: '789.50万',
+            },
+            {
+                avatarUrl:
+                    'http://scimg.158pic.com/touxiang/201709/2017093023374596.jpg',
+                nickName: '维城',
+                worth: '600.50万',
+            },
+            {
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Lo_jr4vafbd8jYB20ozb2at3hV3_ak3Ro7zU2RCJyRX4c41',
+                nickName: '二削皮',
+                worth: '539.50万',
+            }
+        ]
+        const list1 = [{
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9GN68n-GTfsqwxcZixlGM7QleeiENzLxOFflDfZpZqmj-2oC',
+                nickName: 'BOBO',
+                worth: '2.90亿',
+            },
+            {
+                avatarUrl:
+                    'http://www.gx8899.com/uploads/allimg/180118/3-1P11P92057.jpg',
+                nickName: '海阔天空',
+                worth: '2.19亿',
+            },
+            {
+                avatarUrl:
+                    'http://www.wxgzh.net/uploadfile/2016/1004/20161004073943120.jpg',
+                nickName: '野菜不如香菜香',
+                worth: '1.90亿',
+            },
+            {
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXh9yQEHKK-nc2mSsB9i4Tb_F7oU7LcTMyP0ifT28Zri267lOm',
+                nickName: '一个男孩',
+                worth: '1.50亿',
+            },
+            {
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6MdkAJi-qKFq5RWHviwDr-5SKgmgynfBBCOT-N_kJYNqrmA-qvA',
+                nickName: '保温杯+枸杞',
+                worth: '1.32亿',
+            },
+            {
+                avatarUrl:
+                    'http://www.9kuly.com/upFiles/infoImg/201803302301497219.jpg',
+                nickName: '笑看人生',
+                worth: '1.20亿',
+            },
+            {
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ewXINOcGG6aAJv0FeiBM2KU8SNhZlRmGVogmcNFUpGUFiE4uPQ',
+                nickName: '孤单恋人',
+                worth: '9900.00万',
+            },
+            {
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMAdfngC0ju2WXoTnMHInGQuAdpx6dGX43__qqCakHxJAKiqlmCg',
+                nickName: 'Asurading',
+                worth: '9700.00万',
+            },
+            {
+                avatarUrl:
+                    'http://imgtu.5011.net/uploads/content/20170221/4878861487660709.jpg',
+                nickName: '文斌',
+                worth: '9650.00万',
+            },
+            {
+                avatarUrl:
+                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiA2LzWvAWw4reSATPB8kt4HSXt0Yo_97grhGhnwKv7o-0sKe0ZA',
+                nickName: 'Fresh.Qin',
+                worth: '9500.00万',
+            },
+            {
+                avatarUrl:
+                    'http://www.biaobaiju.com/uploads/20180122/16/1516609564-kdSTRAsjeg.jpg',
+                nickName: 'Jad',
+                worth: '9300.00万',
+            },
+            {
+                avatarUrl:
+                    'https://www.68xi.cn/d/file/20170723/859-1F30Q54117-52.jpg',
+                nickName: '花花',
+                worth: '9270.00万',
+            },
+            {
+                avatarUrl:
+                    'http://p9.pstatp.com/large/4ad50001fb2dc7ccb64d',
+                nickName: '加速',
+                worth: '9220.00万',
+            }
+        ]
         return {
             userInfo: {},
-            list: [
-                {
-                    avatarUrl:
-                        'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83eoD19gq63hC5nciceRnSAMkbwM0M8Q3AjG5bgTibKfqiafL6v0jb3EAQC0oVPEfibJmYdCGRtp30Svcsw/0',
-                    nickName: '吃雪怪君',
-                    worth: '1000.00万',
-                },
-                {
-                    avatarUrl:
-                        'https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ervyMJ8rP0ialLQ50ZeeAYzZHskRia8QjgePdibaZciat3eK0icfh9uSnyUakXVpTEQg7ftNAXTKb6Sb6g/0',
-                    nickName: '金炳',
-                    worth: '970.00万',
-                },
-                {
-                    avatarUrl:
-                        'https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEIu2y3ibpr0UiaTm6nib8GpEd7ecgLQBOibYNtzGXquA1KvicuESLhByv0OqLS7ASLsZoftjS6BG7UBMLw/0',
-                    nickName: '楼下小黑',
-                    worth: '890.50万',
-                },
-                {
-                    avatarUrl:
-                        'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0iaMTicE4P8EdORX7zeMuLzUiabZvvkJynpdmvc7L5KHYd0UTWAPZhQNhsHIHicc3BDWXjDm9ueYTWA/0',
-                    nickName: 'W',
-                    worth: '789.50万',
-                },
-                {
-                    avatarUrl:
-                        'http://scimg.158pic.com/touxiang/201709/2017093023374596.jpg',
-                    nickName: '维城',
-                    worth: '600.50万',
-                },
-                {
-                    avatarUrl:
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Lo_jr4vafbd8jYB20ozb2at3hV3_ak3Ro7zU2RCJyRX4c41',
-                    nickName: '二削皮',
-                    worth: '539.50万',
-                }
-            ],
+            list: list,
+            listTmp1:list,
+            listTmp2: list1,
             type: 0,
         }
     },
@@ -109,6 +190,8 @@ export default {
         },
         rankType(type) {
             this.type = type
+            if(type==0) this.list = this.listTmp1;
+            else this.list = this.listTmp2;
         },
     },
 
