@@ -28,9 +28,17 @@
             <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
             <div class="buy-block">
                 <span>500金币</span>
-                <button class="buy-btn"><a href="http://m.you.163.com/item/detail?id=1006007&_stat_area=mod_2_item_14&_stat_id=1005000&_stat_referer=itemList#/?_k=h8xgt6">立即购买</a></button>
+                <button class="buy-btn"><a href="http://m.you.163.com/item/detail?id=1006007&_stat_area=mod_2_item_14&_stat_id=1005000&_stat_referer=itemList#/?_k=h8xgt6">已拥有</a></button>
             </div>
-            <i class="al-has"><span>拥</span> </i>
+            <i class="al-has"> </i>
+            <span class="al-has-span">拥</span>
+        </li>
+        <li class="item item2">
+            <img src="http://yanxuan.nosdn.127.net/a67a775fcb0712b691a492cc387d1dc4.png?imageView&thumbnail=430x430&quality=95" alt="">
+            <div class="buy-block">
+                <span>500金币</span>
+                <button class="buy-btn">立即购买</button>
+            </div>
         </li>
         <li class="item item2">
             <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/4b4dc24c777115efe22478c5601f1ea9%20%281%29.png" alt="">
@@ -196,7 +204,7 @@ export default {
 .al-has {
     font-size: 12px;
     color: #999;
-    border: 1px solid #999;
+    border: 1px solid salmon;
     width: 20px;
     height: 20px;
     border-radius: 12px;
@@ -217,14 +225,18 @@ export default {
 .game_item li {
     display: inline-block;
     position: relative;
-    margin-left: 20px;
+    margin-right: 8px;
+    background: rgb(242, 242, 242);
+}
+
+.game_item .item1 {
+    margin-left: 10px;
 }
 
 .game_item li img {
     width: 150px;
-    height: 150px;
+    height: 130px;
 }
-
 .game_item li span {
     position: absolute;
     left: 40px;
@@ -240,9 +252,20 @@ export default {
     top: 115px;
 }
 
+.game_item .buy-btn {
+    font-size: 12px;
+    line-height: 30px;
+    margin-left: 0;
+    height: 32px;
+    display: inline-block;
+    padding: 0;
+    width: 100px;
+    border: 1px solid #f4f4f4;
+    color: #ccc;
+}
+
 .game_item li div {
     text-align: center;
-    position: relative;
 }
 
 .game_item li span {
@@ -267,7 +290,6 @@ export default {
 }
 
 .game_item {
-    background: rgb(242, 242, 242);
 }
 
 .game_item::after {
@@ -344,11 +366,15 @@ export default {
     line-height: 1;
 }
 
-.al-has span {
-    font-size: 12px;
-    margin-left: 10px;
-    left: -5px;
-    top: 0;
-    position: initial;
+.al-has-span {
+    font-size: 12px !important;
+    position: absolute !important;
+    top: 5px !important;
+    right: 8px !important;
+    left: auto !important;
+    margin-left: auto;
+}
+.game_item .buy-block {
+    margin-bottom: 8px;
 }
 </style>
