@@ -1,6 +1,5 @@
 export function onShare(res, nickName, gender, fromId) {
   let genderTxt = 'Ta';
-  console.log(gender);
   if(gender == 1) genderTxt = '他';
   if(gender == 2) genderTxt = '她';
   return {

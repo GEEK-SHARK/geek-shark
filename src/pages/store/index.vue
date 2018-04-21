@@ -87,7 +87,7 @@ import task from '@/components/task'
 
 export default {
     onShareAppMessage(res) {
-        return onShare(res, this.userInfo.nickName, 'fromID')
+        return onShare(res, this.userInfo.nickName, this.userInfo.gender, 'fromID')
     },
     data() {
         return {
