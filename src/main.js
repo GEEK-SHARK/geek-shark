@@ -16,7 +16,7 @@ export default {
       '^pages/index/main',
       'pages/share/main',
       'pages/leaderboard/main',
-      'pages/store/index',
+      'pages/store/main',
     ],
     window: {
       backgroundTextStyle: 'light',
