@@ -14,8 +14,7 @@
     <span class="power_value">789.50万</span>
     <img class="img" src="https://png.icons8.com/dotty/50/000000/expensive.png">
     <span class="coin">金币</span>
-    <span class="coin_value">279</span>
-    <span @click="addCoin()" class="add_coin">+</span>
+    <span class="coin_value" @click="addCoin()">279</span>
   </div>
   <div style="width: 100%; height: 8px;background: #f4f4f4;">
   </div>

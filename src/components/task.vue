@@ -15,16 +15,6 @@
             <span class="task_value">1~3金币</span>
           </div>
         </li>
-        <li class="task_item">
-          <div>
-            <span class="task_img">
-                <img src="https://png.icons8.com/nolan/64/000000/walking.png" alt="">
-            </span>
-            <span class="task_title">每日微信运动</span>
-            <span class="task_description">微信步数获取金币</span>
-            <span class="task_value">1~3金币</span>
-          </div>
-        </li>
         <li class="task_item task_item3">
           <div>
             <span class="task_img">
@@ -33,6 +23,16 @@
             <span class="task_title">早睡早起</span>
             <span class="task_description">规定时间打卡获取</span>
             <span class="task_value">+1金币</span>
+          </div>
+        </li>
+        <li class="task_item">
+          <div>
+            <span class="task_img">
+                <img src="https://png.icons8.com/nolan/64/000000/walking.png" alt="">
+            </span>
+            <span class="task_title">每日微信运动</span>
+            <span class="task_description">微信步数获取金币</span>
+            <span class="task_value">1~3金币</span>
           </div>
         </li>
         <li class="task_item">
