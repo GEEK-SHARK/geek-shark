@@ -23,29 +23,23 @@
       <h1>待选商品</h1>
     </div>
     <div class="item-block">
-    <ul class="game_item">
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
-          <span>300 金币</span>
-          <i class="al-has">已用有</i>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/4b4dc24c777115efe22478c5601f1ea9%20%281%29.png" alt="">
-          <span>800 金币</span>
-          <span class="bug">点击购买</span>
-        </div>
-      </li>
-      <li>
-        <div>
-          <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
-          <span>1000 金币</span>
-          <span class="bug">点击购买</span>
-        </div>
-      </li>
-    </ul>
+      <ul class="game_item">
+        <li class="item item1">
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/84f4ac7d46dc4a8814fa4974798d25a0.png" alt="">
+            <div class="buy-block">
+                <span>500金币</span>
+                <button class="buy-btn"><a href="http://m.you.163.com/item/detail?id=1006007&_stat_area=mod_2_item_14&_stat_id=1005000&_stat_referer=itemList#/?_k=h8xgt6">立即购买</a></button>
+            </div>
+            <i class="al-has"><span>拥</span> </i>
+        </li>
+        <li class="item item2">
+            <img src="https://520stone-blog.oss-cn-beijing.aliyuncs.com/tmp/4b4dc24c777115efe22478c5601f1ea9%20%281%29.png" alt="">
+            <div class="buy-block">
+                <span>500金币</span>
+                <button class="buy-btn">立即购买</button>
+            </div>
+        </li>
+      </ul>
     </div>
   </div>
   <task v-if="type == 'task_items'"></task>
@@ -200,9 +194,12 @@ export default {
     opacity: 0.5;
 }
 .al-has {
-    font-size: 10px;
-    color: springgreen;
-    border: 1px solid springgreen;
+    font-size: 12px;
+    color: #999;
+    border: 1px solid #999;
+    width: 20px;
+    height: 20px;
+    border-radius: 12px;
     position: absolute;
     top: 3px;
     right: 3px;
@@ -345,5 +342,13 @@ export default {
     border: none;
     padding: 0 10px;
     line-height: 1;
+}
+
+.al-has span {
+    font-size: 12px;
+    margin-left: 10px;
+    left: -5px;
+    top: 0;
+    position: initial;
 }
 </style>
