@@ -15,7 +15,7 @@
             <span class="task_value">1~3金币</span>
           </div>
         </li>
-        <li class="task_item task_item3">
+        <li class="task_item">
           <div>
             <span class="task_img">
                 <img src="https://png.icons8.com/nolan/64/000000/heart-health.png" alt="">
@@ -25,7 +25,7 @@
             <span class="task_value">+1金币</span>
           </div>
         </li>
-        <li class="task_item">
+        <li class="task_item task_item3">
           <div>
             <span class="task_img">
                 <img src="https://png.icons8.com/nolan/64/000000/walking.png" alt="">

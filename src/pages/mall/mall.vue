@@ -286,7 +286,8 @@ header {
     padding: 0;
     width: 100px;
     border: 1px solid #f4f4f4;
-    color: #ccc;
+    color: #999;
+    margin-top: 5px;
 }
 .clearfix {
     clear: both;

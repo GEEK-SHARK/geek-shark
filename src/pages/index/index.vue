@@ -261,7 +261,7 @@ export default {
     padding: 0;
     width: 100px;
     border: 1px solid #f4f4f4;
-    color: #ccc;
+    color: #999;
 }
 
 .game_item li div {
