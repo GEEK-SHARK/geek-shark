@@ -2,7 +2,7 @@
   "name": "mpvue_demo",
   "version": "1.0.0",
   "description": "A Mpvue project",
-  "author": "金炳 <hzjinbing@corp.netease.com>",
+  "author": "金炳 <hzjinbing@163.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
